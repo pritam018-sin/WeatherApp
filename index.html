@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <span class="logo-icon">🌦️</span>
+                <span class="logo-text">WeatherWise</span>
+            </a>
+        </div>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." />
+            <button id="searchBtn" aria-label="Search">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+            </button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Radar</a></li>
+            <li><a href="#">Maps</a></li>
+            <li><a href="#">Alerts</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="error" id="errorBox" style="display: none;">
+            <p>City not found. Please try again.</p>
+        </div>
+
+        <div class="weather-info" id="weatherBox" style="display: none;">
+            <div class="current-weather">
+                <h2 id="cityName">--</h2>
+                <p id="currentDate">--</p>
+                <div class="main-details">
+                    <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+                    <p id="temperature">-- °C</p>
+                </div>
+                <p id="condition">--</p>
+                <div class="extra-details">
+                    <p>Humidity: <span id="humidity">--</span>%</p>
+                    <p>Wind Speed: <span id="windSpeed">--</span> m/s</p>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid">
+                    <!-- Forecast cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="Script.js"></script>
+</body>
+</html>
